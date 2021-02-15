@@ -3,18 +3,56 @@
 <html lang="en">
 
 <!--
+- home page navigation button
+- final score
+- tetris logo
+- game over shoutout
 
 -->
 
 <head>
     <meta charset="utf-8">
+    <style>
+        body {
+            background-color: rgb(117, 119, 241);
+            text-align: center;
+        }
+       h1 {
+  display: inline-block;
+  color: rgb(185, 19, 19);
+  font-family: 'monaco';
+  font-size: 12em; 
+  text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+  }
+  h1:after {
+    content: attr(data-shadow);
+    position: absolute;
+    top: .06em; left: .06em;
+    z-index: -1;
+    text-shadow: none;
+    background-image:
+      linear-gradient(
+        45deg,
+        transparent 45%,
+        rgb(100, 84, 10) 45%,
+        rgb(30, 7, 92) 55%,
+        transparent 0
+        );
+    background-size: .05em .05em;
+    animation: shad-anim 15s linear infinite;
+    }
+    </style>
+
 </head>
 
 
 <body>
-    <div>
-        Hello World!
-    </div>
+    <img src="./images/tetrisnobackground.png" alt="Tetris logo" width="500" height="500">
+    <h1>
+        Game Over!
+    </h1>
+    <br>
+    <a href="game.html" style="font-size:75px; font-family: 'Monaco';">Play Again</a>
 </body>
 
 </html>
