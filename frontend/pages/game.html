@@ -3,18 +3,40 @@
 <html lang="en">
 
 <!--
-
+- countdown
+- header
+- alert message once countdown has ended
+- table to display the game
+- animation upon point scoring
+- css style sheet import
 -->
 
 <head>
     <meta charset="utf-8">
+    <title>Tetris</title>
+    <style>
+        body {
+            background-color: rgb(117, 119, 241);
+            text-align: center;
+        }
+    </style>
 </head>
 
 
 <body>
-    <div>
-        Hello Game!
+    <h3></h3>
+    <script src = "countdown.js"></script>
+    <div id="target" class = "countdown">
+        <div id = "A"></div>
     </div>
+    <script>
+        window.addEventListener("load", function(){
+            counter.init("A", 300, function(idx){
+                alert("Time up!!!")
+            });
+
+        })
+    </script>
 </body>
 
 </html>
