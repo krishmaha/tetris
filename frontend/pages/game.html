@@ -3,40 +3,168 @@
 <html lang="en">
 
 <!--
-- countdown
-- header
-- alert message once countdown has ended
-- table to display the game
-- animation upon point scoring
-- css style sheet import
+- countdown (done)
+- header (not started)
+- alert message once countdown has ended (done)
+- table to display the game (done - needs styling)
+- animation upon point scoring (not started)
+- css style sheet import (not started)
+- div to display the score count of the user (not started)
+
 -->
 
-<head>
+<title>Tetris</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Styles the header*/
+header {
+  background-color: #7577f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color:black;
+}
+
+h2 {
+    font-family: 'Aldrich', sans-serif;
+}
+
+/* Creates two boxes next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 1000px;
+  background: #9c9deb;
+  padding: 20px;
+}
+
+/* Styles the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  height: 1000px;
+  background-color: #b1b2e9;
+
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: black;
+  font-weight: bold;
+  float: right;
+  font-size: 25px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.closebtn:hover{
+  color: red;
+}
+
+
+/* Responsive layout*/
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="manifest" href="/favicons/site.webmanifest">
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+<header>
+  <img src="./images/tetrisnobackground.png" alt="Tetris logo" width="150" height="110">
+  <h2>Welcome to Tetris!</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <a href="createGame.html">Home Page</a>
+      <br>
+      <a href="game.html">Play Again</a>
+      <br>
+      <a href="#">Settings</a>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1> 
+      <head>
     <meta charset="utf-8">
-    <title>Tetris</title>
     <style>
         body {
-            background-color: rgb(117, 119, 241);
             text-align: center;
+            background-color: white;
+        };
+        table, tr, td {
+            border: 10px solid red;
+            border-collapse: collapse;
         }
     </style>
 </head>
 
 
 <body>
-    <h3></h3>
     <script src = "countdown.js"></script>
+    <script>
+        window.addEventListener("load", function(){
+            counter.init("A", 301, function(idx){
+                window.location.replace("http://localhost:3000/gameOver.html")
+            });
+        })
+    </script>
     <div id="target" class = "countdown">
         <div id = "A"></div>
     </div>
-    <script>
-        window.addEventListener("load", function(){
-            counter.init("A", 300, function(idx){
-                alert("Time up!!!")
-            });
+    <div id='score'>{score}</div>
+        
+<canvas id = "tetris" width = '300' height = '600'></canvas>
+<script src = 'tetris.js'></script>
+    </body>
+    
+    </h1>
+  </article>
+</section>
 
-        })
-    </script>
-</body>
-
-</html>

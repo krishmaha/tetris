@@ -10,49 +10,165 @@
 
 -->
 
-<head>
-    <meta charset="utf-8">
-    <style>
-        body {
-            background-color: rgb(117, 119, 241);
-            text-align: center;
-        }
-       h1 {
-  display: inline-block;
-  color: rgb(185, 19, 19);
-  font-family: 'monaco';
-  font-size: 12em; 
-  text-shadow: .03em .03em 0 hsla(230,40%,50%,1);
+<title>Tetris</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-size: x-large;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+}
+
+/* Styles the header */
+header {
+  background-color: #7577f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color:black;
+}
+
+/* Creates two boxes next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 600px;
+  background: #9c9deb;
+  padding: 20px;
+}
+
+/* Styles the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  height: 600px;
+  background-color: #b1b2e9;
+
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  margin-bottom: 15px;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: xx-large;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: black;
+  font-weight: bold;
+  float: right;
+  font-size: 25px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.closebtn:hover{
+  color: whitesmoke;
+}
+
+
+/* Responsive layout*/
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
   }
-  h1:after {
-    content: attr(data-shadow);
-    position: absolute;
-    top: .06em; left: .06em;
-    z-index: -1;
-    text-shadow: none;
-    background-image:
-      linear-gradient(
-        45deg,
-        transparent 45%,
-        rgb(100, 84, 10) 45%,
-        rgb(30, 7, 92) 55%,
-        transparent 0
-        );
-    background-size: .05em .05em;
-    animation: shad-anim 15s linear infinite;
-    }
-    </style>
-
+}
+</style>
 </head>
-
-
 <body>
-    <img src="./images/tetrisnobackground.png" alt="Tetris logo" width="500" height="500">
-    <h1>
-        Game Over!
-    </h1>
-    <br>
-    <a href="game.html" style="font-size:75px; font-family: 'Monaco';">Play Again</a>
-</body>
 
+<header>
+  <img src="./images/tetrisnobackground.png" alt="Tetris logo" width="150" height="110">
+  <h2> 
+    <div class = 'alert'>
+    <span class="closebtn" onClick="this.parentElement.style.display='none';">
+      &times;
+    </span>  
+    Game over!!!
+  </div>
+</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <a href="createGame.html">Home Page</a>
+      <br>
+      <a href="game.html">Play Again</a>
+      <br>
+      <a href="#">Settings</a>
+    </ul>
+  </nav>
+  
+  <article>
+      
+    <h2> Leaderboard </h2>
+    <head>
+      <style>
+      table, th, td {
+        border: 1px solid black;
+      }
+      th, td {
+        text-align: center
+      }
+      </style>
+      </head>
+      <table style="width:100%">
+        <tr>
+          <th>Rank</th>
+          <th>Username</th>
+          <th>Score</th> 
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>xxx</td>
+          <td>score </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>xxx</td>
+          <td>score </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>xxx</td>
+          <td>score </td>
+        </tr>
+      </table>
+  </article>
+</section>
+
+
+</body>
 </html>
+
