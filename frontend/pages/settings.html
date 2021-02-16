@@ -1,0 +1,132 @@
+<!doctype html>
+
+<html lang="en">
+
+<!--
+
+-->
+
+<head>
+    <title>Settings</title>
+    <style>
+        a:link, a:visited {
+            color: rgb(0, 0, 0);
+            padding: 14px 0px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+          }
+        
+        .hoverButton:hover, .hoverButton:active {
+            background-color: rgb(255, 86, 86);
+          }
+    
+        .backgroundColour {
+            background-color:rgb(255, 38, 0);
+            text-align: center;
+        }
+
+        .dropdownLink {
+            text-align: center;
+            width: 100%;
+            display: inline-block;
+            padding: 14px 0px;
+        }
+
+        div {background-color: rgb(255, 38, 0);}
+            div a {
+                text-decoration: none;
+                color: white;
+                font-size: 20px;
+                padding: 14px 0px;
+                display:inline-block;
+                text-align: center;
+            }
+
+        ul {
+            display: inline;
+            margin: 0;
+            padding: 0;
+        }
+        ul li {
+            display: inline-block;
+            width: 100%;
+        }
+        ul li:hover {
+            background: rgb(255, 86, 86);
+            width: 100%;
+        }
+        ul li:hover ul {
+            display: block;
+        }
+        ul li ul {
+            position: absolute;
+            width: 100%;
+            display: none;
+        }
+        ul li ul li { 
+            background: rgb(233, 233, 233); 
+            display: block;
+            width: 100%; 
+        }
+        ul li ul li a {display:block !important;} 
+        ul li ul li:hover {background: rgb(199, 195, 195);}
+    </style>
+</head>
+
+
+
+<body>
+    <p class="backgroundColour hoverButton">
+        <a href="/createGame.html" style="width: 100%;">Main Menu</a>
+    </p>
+        
+    <h1 style="color:rgb(0, 0, 0);">
+        Instructions
+    </h1>
+
+    <p>
+        <b>GOAL</b>
+         - Put your organizational skills and endurance to the test by clearing as many lines as possible.
+    </p>
+    <p>
+        <b>CLEAR LINES</b>
+         – Maneuver the falling Tetriminos to fit them together within the Matrix. To clear a line, fill every square within a single row.
+    </p>
+    <p>
+        <b>SCORE POINTS</b>
+         - Earn points by clearing lines. Clear multiple lines at once to increase your scoring opportunities.
+    </p>
+    <p>
+        <b>GHOST PIECE</b>
+         – Use the Ghost Piece to determine the best fit for the falling Tetrimino. This helpful guide appears directly below the falling Tetrimino and displays possible placements.
+    </p>
+    <p>
+       <b>NEXT QUEUE</b>
+       – Preview the upcoming Tetrimino in the Next Queue to plan ahead and increase your scoring opportunities.
+    </p>
+    <p>
+        <b>HOLD QUEUE</b>
+         – Store a falling Tetrimino in the Hold Queue for later use.
+    </p>
+    <p>
+        <b>GAME OVER</b>
+         - Stack the Tetriminos too high and the game is over!
+    </p>
+
+    <div>
+    <ul>
+        <li>
+        <a class="dropdownLink" href="#">Dropdown Link</a>
+        <ul>
+            <li><a href="#">Colour Theme 1</a></li>
+            <li><a href="#">Colour Theme 2</a></li>
+            <li><a href="#">Colour Theme 3</a></li>
+        </ul>
+        </li>
+    </ul>
+    </div>
+
+</body>
+
+</html>

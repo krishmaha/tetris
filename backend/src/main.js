@@ -14,7 +14,7 @@ const app = express()
 // Set the port we use to receive incoming web traffic.
 // On the live server, Heroku sets the port in an environment variable.
 // For development, we use port 3000.
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 8080
 
 // Find path of client directory
 const getClientDirectory = () => {
