@@ -2,6 +2,7 @@ import express from 'express'
 import { fileURLToPath } from 'url'
 import path from 'path'
 import { apiRouter } from './api/apiRouter.js'
+import mongoose from 'mongoose'
 
 /*
 This is the entry point of our application.
@@ -28,6 +29,19 @@ app.use('/', express.static(getClientDirectory()))
 
 // API endpoints available at "<siteurl>/api/<endpoint>"
 app.use('/api', apiRouter)
+
+mongoose
+    .connect(`mongodb+srv://workExperience:SoftwireWorkExp2021@cluster0-rvl0b.mongodb.net/swtetris?retryWrites=true&w=majority`, {
+        useNewUrlParser: true
+    })
+    .then(() => {
+        console.log('good db connection');
+        app.listen(8000);
+    })
+    .catch(err => {
+        console.log(err);
+    });
+
 
 // Receive incoming traffic
 app.listen(port, () => {
