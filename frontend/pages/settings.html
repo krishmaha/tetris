@@ -9,6 +9,10 @@
 <head>
     <title>Settings</title>
     <style>
+        .backgroundPageColour {
+            background-color:  rgb(255, 230, 230);
+        }
+
         a:link, a:visited {
             color: rgb(0, 0, 0);
             padding: 14px 0px;
@@ -33,15 +37,17 @@
             padding: 14px 0px;
         }
 
-        div {background-color: rgb(255, 38, 0);}
-            div a {
-                text-decoration: none;
-                color: white;
-                font-size: 20px;
-                padding: 14px 0px;
-                display:inline-block;
-                text-align: center;
+        div {
+            background-color: rgb(255, 38, 0)
             }
+        div a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 14px 0px;
+            display:inline-block;
+            text-align: center;
+        }
 
         ul {
             display: inline;
@@ -60,7 +66,6 @@
             display: block;
         }
         ul li ul {
-            position: absolute;
             width: 100%;
             display: none;
         }
@@ -69,15 +74,93 @@
             display: block;
             width: 100%; 
         }
-        ul li ul li a {display:block !important;} 
-        ul li ul li:hover {background: rgb(199, 195, 195);}
+        ul li ul li a {
+            display:block !important;
+        } 
+
+        ul li ul li:hover {
+            background: rgb(199, 195, 195);
+            padding: 10px 0px;
+            
+        }
+
+        .backgroundColour1 {
+            background-color: rgb(255, 230, 230);
+        }
+
+        .backgroundColour2 {
+            background-color: rgb(179, 218, 255);
+        }
+        
+        .backgroundColour3 {
+            background-color: rgb(179, 255, 179)
+        }
+        
+        .MenuColour1 {
+            background-color: rgb(255, 38, 0)
+        }
+
+        .MenuColour2 {
+            background-color: rgb(4, 0, 255)
+        }
+
+        .MenuColour3 {
+            background-color: rgb(0, 153, 77)
+        }
+
+        .MenuHoverColour1:hover, .MenuHoverColour1:active {
+            background-color: rgb(255, 86, 86)
+        }
+
+        .MenuHoverColour2:hover, .MenuHoverColour2:active {
+            background-color: rgb(87, 85, 255)
+        }
+
+        .MenuHoverColour3:hover, .MenuHoverColour3:active {
+            background-color: rgb(88, 173, 130)
+        }
+        
     </style>
+
+    <script>
+     function theme1Colour1() {
+         var b = document.getElementById("bodyId");
+         b.className = "backgroundColour1";
+     }
+     function theme2Colour1() {
+         var c = document.getElementById("bodyId");
+         c.className = "backgroundColour2";
+     }
+     function theme3Colour1() {
+         var d = document.getElementById("bodyId");
+         d.className = "backgroundColour3";
+     }
+
+     function theme1Colour2() {
+         var e = document.getElementById("MenuId");
+         e.className = "MenuColour1 MenuHoverColour1";
+     }
+     function theme2Colour2() {
+         var f = document.getElementById("MenuId");
+         f.className = "MenuColour2 MenuHoverColour2";
+     }
+     function theme3Colour2() {
+         var g = document.getElementById("MenuId");
+         g.className = "MenuColour3 MenuHoverColour3";
+     }
+
+     
+     
+
+    </script>
+
 </head>
 
 
 
-<body>
-    <p class="backgroundColour hoverButton">
+<body id="bodyId" class="backgroundPageColour">
+
+    <p id="MenuId" class="backgroundColour hoverButton">
         <a href="/createGame.html" style="width: 100%;">Main Menu</a>
     </p>
         
@@ -117,11 +200,11 @@
     <div>
     <ul>
         <li>
-        <a class="dropdownLink" href="#">Dropdown Link</a>
+        <a id="ColourId" class="dropdownLink" href="#">Colour Themes</a>
         <ul>
-            <li><a href="#">Colour Theme 1</a></li>
-            <li><a href="#">Colour Theme 2</a></li>
-            <li><a href="#">Colour Theme 3</a></li>
+            <li><a href="#" onClick="theme1Colour1(); theme1Colour2(); theme1Colour3()">Colour Theme 1</a></li>
+            <li><a href="#" onClick="theme2Colour1(); theme2Colour2(); theme2Colour3()">Colour Theme 2</a></li>
+            <li><a href="#" onClick="theme3Colour1(); theme3Colour2(); theme3Colour3()">Colour Theme 3</a></li>
         </ul>
         </li>
     </ul>
