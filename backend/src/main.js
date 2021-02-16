@@ -31,7 +31,7 @@ app.use('/', express.static(getClientDirectory()))
 app.use('/api', apiRouter)
 
 mongoose
-    .connect(`mongodb+srv://workExperience:SoftwireWorkExp2021@cluster0-rvl0b.mongodb.net/swtetris?retryWrites=true&w=majority`, {
+    .connect(`mongodb+srv://workExperience:SoftwireWorkExp2021@cluster0.sjinv.mongodb.net/swtetris?retryWrites=true&w=majority`, {
         useNewUrlParser: true
     })
     .then(() => {
