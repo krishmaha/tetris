@@ -1,0 +1,380 @@
+<!doctype html>
+
+<html lang="en">
+
+<!--
+
+-->
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: url(bg.jpg);
+    }
+
+                
+    .button1 {
+        position:absolute;
+        top:38% ;
+        right:40% ;
+        z-index: 1;
+        background-color: rgb(132, 41, 155);
+        font-family: fantasy;
+        font-size: 40px;
+        box-shadow: 5px 25px 26px 0 rgba(0,0,0,100);     
+        width: 25% ;
+        display: block;
+        border-radius: 1em;
+        cursor:pointer ;
+
+    }
+
+    .button1:hover {
+        background-color: #3ad4cd;
+        color: white;
+        animation: shake 1s;
+        animation-iteration-count: infinite;
+        transition-duration: 0.7s;
+    }
+
+
+    @keyframes shake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -1px) rotate(-1deg); }
+        20% { transform: translate(-1px, 1px) rotate(1deg); }
+        30% { transform: translate(1px, 1px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 1px) rotate(-1deg); }
+        60% { transform: translate(-1px, 1px) rotate(0deg); }
+        70% { transform: translate(1px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 1px) rotate(0deg); }
+        100% { transform: translate(1px, -1px) rotate(-1deg); }
+    }
+
+    .button1 span {
+        display: inline-block;
+        position: relative;
+        transition: 0.3s;
+        }
+
+    .button1 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.3s;
+    }  .button1:hover span {
+    padding-right: 25px;
+    }
+
+    .button1:hover span:after {
+    opacity: 1;
+    right: 0;
+    }
+
+    .button1:active {
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+
+    
+    .button2 {
+        position:absolute;
+        top: 55%;
+        right: 48%;
+        cursor: pointer;
+    }
+
+    .button2 {
+        background-color: rgb(132, 41, 155) ;
+        font-family: fantasy;
+        font-size: 40px;
+        box-shadow: 5px 25px 26px 0 rgba(0,0,0,100);            
+        width: 10.5%;
+        border-radius: 1em;
+    }
+
+    .button2:hover {
+        
+        background-color: #3ad4cd;
+        color: white;
+        animation: shake 1s;
+        animation-iteration-count: infinite;
+        transition-duration: 0.7s;
+    }
+
+    @keyframes shake {
+    0% { transform: translate(3px, 3px) rotate(0deg); }
+    10% { transform: translate(-1px, -1px) rotate(-3deg); }
+    20% { transform: translate(-2px, 2px) rotate(2deg); }
+    30% { transform: translate(3px, 3px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-2px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 3px) rotate(0deg); }
+    70% { transform: translate(1px, 1px) rotate(-1deg); }
+    80% { transform: translate(-2px, -2px) rotate(2deg); }
+    90% { transform: translate(3px, 3px) rotate(0deg); }
+    100% { transform: translate(1px, -1px) rotate(-3deg); }
+}
+
+
+
+    .button2 span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.3s;
+        }
+
+    .button2 span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.3s;
+        z-index: 1;
+        }
+
+        .button2:hover span {
+            padding-right: 25px;
+        }
+
+        .button2:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .button2:active {
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+
+        .button3 {
+            position:absolute;
+            top:2% ;
+            right:2% ;
+            background-color: #4CAF50;
+            color: rgb(255, 255, 255);
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 10%;
+            opacity: 1;
+        }
+
+       .button3:hover {
+           opacity:0.9;
+        }
+        
+        
+        .button3:active {
+            background-color: #ffffff;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .back {
+            position:absolute;
+            top:2% ;
+            left:2% ;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 10%;
+            opacity: 1;
+        }
+
+       .back:hover {
+           opacity:0.9;
+        }
+        
+        
+        .back:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+
+
+
+        .container {
+            position: absolute;
+            background-color: cadetblue;
+            width: 20%;
+            padding: 3%;
+            border-radius: 5%;
+            margin: 25% auto 15% auto;
+            z-index: 2;
+            
+        }
+
+        .container-content {
+            margin: 5% auto 15% auto;
+        }
+    
+        .cancel {
+            background-color: red;
+            padding: 10px 50px;
+            font-size: large ;
+            cursor: pointer;
+        }
+
+        .cancel:active {
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .login {
+            background-color: lightblue ;
+            padding: 10px 60px;   
+            font-size: large ;
+            cursor: pointer;
+        }
+
+        .login:active {
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        .signup { 
+            background-color: lightblue ;
+            padding: 10px 60px;   
+            font-size: large ;
+            cursor: pointer;
+        }
+
+        .signup:active {
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+            }
+
+        .bg {
+            width:20em;
+            position: absolute;
+            bottom: 1%;
+            right: 0%;
+            opacity: 0.9;
+        }
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div>
+        <button id='Continue as guest' class="button button1" onclick="location.href='game.html'">Continue as guest</button>
+        
+
+        <button id='Sign in' class="button button2" onclick="showDiv()">Sign in</button>
+
+
+        <button id='Sign up' class="button button3" onclick="document.getElementById('signup_box').style.display='block'">Sign up</button>
+
+    </div>
+    
+
+<div id="signin_box" class="container" style="display: none;">
+
+    <form method="GET">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <br>
+        <br>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        <br><br>
+        <button class="cancel" onclick="document.getElementById('signin_box').style.display='none'">Cancel</button>
+        <button class="login" type="submit" onclick="getDetails(this.form)">
+            <a href="game.html">Log in</a>
+        </button>
+    </form>
+</div>
+
+<div id="signup_box" class="container" style="display: none;">
+    <form method="GET">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+        <br>
+        <br>
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+        <br><br>
+        <button class="cancel" onclick="document.getElementById('signup_box').style.display='none'">Cancel</button>
+        <button class="signup" type="submit" onclick="checkDetails(this.form)">Sign up</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+    <div id="signin_box" class="container_signin" style="display: none;">
+
+        <form method="GET">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <br>
+            <br>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <br><br>
+            <button onclick="document.getElementById('signin_box').style.display='none'">Cancel</button>
+            <button type="submit" onclick="getDetails(this.form);">
+            
+            <a href="game.html">Log in</a>
+            </button>
+        </form>
+
+    </div>
+
+    <button class="button back" onclick="location.href='homePage.html'">Back</button>
+
+    <img class="bg" src="logo4.png">
+
+
+
+
+<script src="signin.js"></script>
+</body>
+
+</html>
