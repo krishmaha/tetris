@@ -25,12 +25,12 @@ function fillSquare(x, y, colour){
 let grid = [];
 
 // create the rows using a for loop that continues until the number of rows is equal to the const defined above
-for (let r = 0; r < row; r++){
+for (r = 0; r < row; r++){
     // for each value of r we create an empty array inside the grid array, representing a row
     grid[r] = []
 
     // to define the columns we also use a for loop
-    for(let c = 0; c < column; c++){
+    for(c = 0; c < column; c++){
         // this indexes the row arrays inside the grid arrays and sets them to vacant as initally they are all empty
         // this will create 20 empty columns inside each row
         grid[r][c] = vacant;
@@ -65,7 +65,7 @@ const pieces =[
 // generate a random piece
 function randomPiece(){
     let ran = randomNumber = Math.floor(math.random()*pieces.length)
-    return new Piece(pieces[r][0], pieces[r][1])
+    return new Piece(pieces[ran][0], pieces[ran][1])
 }
 
 // instantiate an instance of the Piece object
