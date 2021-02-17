@@ -8,9 +8,14 @@
 
 <head>
     <title>Settings</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <style>
         .backgroundPageColour {
-            background-color:  rgb(255, 230, 230);
+            background-color:  rgb(188,90,162);
+        }
+
+        .fontSize1 {
+            font-size: 25px;
         }
 
         a:link, a:visited {
@@ -22,11 +27,11 @@
           }
         
         .hoverButton:hover, .hoverButton:active {
-            background-color: rgb(255, 86, 86);
+            background-color: rgb(124, 47, 114);
           }
     
         .backgroundColour {
-            background-color:rgb(255, 38, 0);
+            background-color:rgb(111,34,101);
             text-align: center;
         }
 
@@ -38,7 +43,7 @@
         }
 
         div {
-            background-color: rgb(255, 38, 0)
+            background-color: rgb(111,34,101)
             }
         div a {
             text-decoration: none;
@@ -59,7 +64,7 @@
             width: 100%;
         }
         ul li:hover {
-            background: rgb(255, 86, 86);
+            background: rgb(124, 47, 114);
             width: 100%;
         }
         ul li:hover ul {
@@ -85,39 +90,97 @@
         }
 
         .backgroundColour1 {
-            background-color: rgb(255, 230, 230);
+            background-color: rgb(188,90,162);
         }
 
         .backgroundColour2 {
-            background-color: rgb(179, 218, 255);
+            background-color: rgb(251,224,33);
         }
         
         .backgroundColour3 {
-            background-color: rgb(179, 255, 179)
+            background-color: rgb(108,203,219)
         }
         
         .MenuColour1 {
-            background-color: rgb(255, 38, 0)
+            background-color: rgb(111,34,101)
         }
 
         .MenuColour2 {
-            background-color: rgb(4, 0, 255)
+            background-color: rgb(246,139,31)
         }
 
         .MenuColour3 {
-            background-color: rgb(0, 153, 77)
+            background-color: rgb(40,103,177)
         }
 
         .MenuHoverColour1:hover, .MenuHoverColour1:active {
-            background-color: rgb(255, 86, 86)
+            background-color: rgb(124, 47, 114)
         }
 
         .MenuHoverColour2:hover, .MenuHoverColour2:active {
-            background-color: rgb(87, 85, 255)
+            background-color: rgb(241, 161, 80)
         }
 
         .MenuHoverColour3:hover, .MenuHoverColour3:active {
-            background-color: rgb(88, 173, 130)
+            background-color: rgb(50, 116, 192)
+        }
+
+        .DropdownColour1 {
+            background-color: rgb(111,34,101);
+            padding: 14px 0px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .DropdownColour2 {
+            background-color: rgb(246,139,31);
+            padding: 14px 0px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .DropdownColour3 {
+            background-color: rgb(40,103,177);
+            padding: 14px 0px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .DropdownHoverColour1:hover, .DropdownHoverColour1:active {
+            background-color: rgb(124, 47, 114);
+            padding: 14px 0px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .DropdownHoverColour2:hover, .DropdownHoverColour2:active {
+            background-color: rgb(241, 161, 80);
+            padding: 14px 0px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .DropdownHoverColour3:hover, .DropdownHoverColour3:active {
+            background-color: rgb(50, 116, 192);
+            padding: 14px 0px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+        }
+
+        body {
+            font-family: "Montserrat";
         }
         
     </style>
@@ -138,19 +201,29 @@
 
      function theme1Colour2() {
          var e = document.getElementById("MenuId");
-         e.className = "MenuColour1 MenuHoverColour1";
+         e.className = "MenuColour1 MenuHoverColour1 fontSize1";
      }
      function theme2Colour2() {
          var f = document.getElementById("MenuId");
-         f.className = "MenuColour2 MenuHoverColour2";
+         f.className = "MenuColour2 MenuHoverColour2 fontSize1";
      }
      function theme3Colour2() {
          var g = document.getElementById("MenuId");
-         g.className = "MenuColour3 MenuHoverColour3";
+         g.className = "MenuColour3 MenuHoverColour3 fontSize1";
      }
 
-     
-     
+     function theme1Colour3() {
+         var h = document.getElementById("DropdownId");
+         h.className = "DropdownColour1 DropdownHoverColour1";
+     }
+     function theme2Colour3() {
+         var i = document.getElementById("DropdownId");
+         i.className = "DropdownColour2 DropdownHoverColour2";
+     }
+     function theme3Colour3() {
+         var j = document.getElementById("DropdownId");
+         j.className = "DropdownColour3 DropdownHoverColour3";
+     }
 
     </script>
 
@@ -160,14 +233,14 @@
 
 <body id="bodyId" class="backgroundPageColour">
 
-    <p id="MenuId" class="backgroundColour hoverButton">
+    <p id="MenuId" class="backgroundColour hoverButton fontSize1">
         <a href="/createGame.html" style="width: 100%;">Main Menu</a>
     </p>
         
-    <h1 style="color:rgb(0, 0, 0);">
+    <h2>
         Instructions
-    </h1>
-
+    </h2>
+    <img src = "https://upload.wikimedia.org/wikipedia/en/b/b0/The_Tetris_Company_logo.png" style="float:right">
     <p>
         <b>GOAL</b>
          - Put your organizational skills and endurance to the test by clearing as many lines as possible.
@@ -200,7 +273,7 @@
     <div>
     <ul>
         <li>
-        <a id="ColourId" class="dropdownLink" href="#">Colour Themes</a>
+        <a id="DropdownId" class="dropdownLink" href="#">Colour Themes</a>
         <ul>
             <li><a href="#" onClick="theme1Colour1(); theme1Colour2(); theme1Colour3()">Colour Theme 1</a></li>
             <li><a href="#" onClick="theme2Colour1(); theme2Colour2(); theme2Colour3()">Colour Theme 2</a></li>
