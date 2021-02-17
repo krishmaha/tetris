@@ -1,0 +1,288 @@
+<!doctype html>
+
+<html lang="en">
+
+<!--
+
+-->
+
+<head>
+    <title>Settings</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <style>
+        .backgroundPageColour {
+            background-color:  rgb(188,90,162);
+        }
+
+        .fontSize1 {
+            font-size: 25px;
+        }
+
+        a:link, a:visited {
+            color: rgb(0, 0, 0);
+            padding: 14px 0px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+          }
+        
+        .hoverButton:hover, .hoverButton:active {
+            background-color: rgb(124, 47, 114);
+          }
+    
+        .backgroundColour {
+            background-color:rgb(111,34,101);
+            text-align: center;
+        }
+
+        .dropdownLink {
+            text-align: center;
+            width: 100%;
+            display: inline-block;
+            padding: 14px 0px;
+        }
+
+        div {
+            background-color: rgb(111,34,101)
+            }
+        div a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            padding: 14px 0px;
+            display:inline-block;
+            text-align: center;
+        }
+
+        ul {
+            display: inline;
+            margin: 0;
+            padding: 0;
+        }
+        ul li {
+            display: inline-block;
+            width: 100%;
+        }
+        ul li:hover {
+            background: rgb(124, 47, 114);
+            width: 100%;
+        }
+        ul li:hover ul {
+            display: block;
+        }
+        ul li ul {
+            width: 100%;
+            display: none;
+        }
+        ul li ul li { 
+            background: rgb(233, 233, 233); 
+            display: block;
+            width: 100%; 
+        }
+        ul li ul li a {
+            display:block !important;
+        } 
+
+        ul li ul li:hover {
+            background: rgb(199, 195, 195);
+            padding: 10px 0px;
+            
+        }
+
+        .backgroundColour1 {
+            background-color: rgb(188,90,162);
+        }
+
+        .backgroundColour2 {
+            background-color: rgb(251,224,33);
+        }
+        
+        .backgroundColour3 {
+            background-color: rgb(108,203,219)
+        }
+        
+        .MenuColour1 {
+            background-color: rgb(111,34,101)
+        }
+
+        .MenuColour2 {
+            background-color: rgb(246,139,31)
+        }
+
+        .MenuColour3 {
+            background-color: rgb(40,103,177)
+        }
+
+        .MenuHoverColour1:hover, .MenuHoverColour1:active {
+            background-color: rgb(124, 47, 114)
+        }
+
+        .MenuHoverColour2:hover, .MenuHoverColour2:active {
+            background-color: rgb(241, 161, 80)
+        }
+
+        .MenuHoverColour3:hover, .MenuHoverColour3:active {
+            background-color: rgb(50, 116, 192)
+        }
+
+        .DropdownColour1 {
+            background-color: rgb(111,34,101);
+            padding: 14px 0px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .DropdownColour2 {
+            background-color: rgb(246,139,31);
+            padding: 14px 0px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .DropdownColour3 {
+            background-color: rgb(40,103,177);
+            padding: 14px 0px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .DropdownHoverColour1:hover, .DropdownHoverColour1:active {
+            background-color: rgb(124, 47, 114);
+            padding: 14px 0px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .DropdownHoverColour2:hover, .DropdownHoverColour2:active {
+            background-color: rgb(241, 161, 80);
+            padding: 14px 0px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .DropdownHoverColour3:hover, .DropdownHoverColour3:active {
+            background-color: rgb(50, 116, 192);
+            padding: 14px 0px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+        }
+
+        body {
+            font-family: "Montserrat";
+        }
+        
+    </style>
+
+    <script>
+     function theme1Colour1() {
+         var b = document.getElementById("bodyId");
+         b.className = "backgroundColour1";
+     }
+     function theme2Colour1() {
+         var c = document.getElementById("bodyId");
+         c.className = "backgroundColour2";
+     }
+     function theme3Colour1() {
+         var d = document.getElementById("bodyId");
+         d.className = "backgroundColour3";
+     }
+
+     function theme1Colour2() {
+         var e = document.getElementById("MenuId");
+         e.className = "MenuColour1 MenuHoverColour1 fontSize1";
+     }
+     function theme2Colour2() {
+         var f = document.getElementById("MenuId");
+         f.className = "MenuColour2 MenuHoverColour2 fontSize1";
+     }
+     function theme3Colour2() {
+         var g = document.getElementById("MenuId");
+         g.className = "MenuColour3 MenuHoverColour3 fontSize1";
+     }
+
+     function theme1Colour3() {
+         var h = document.getElementById("DropdownId");
+         h.className = "DropdownColour1 DropdownHoverColour1";
+     }
+     function theme2Colour3() {
+         var i = document.getElementById("DropdownId");
+         i.className = "DropdownColour2 DropdownHoverColour2";
+     }
+     function theme3Colour3() {
+         var j = document.getElementById("DropdownId");
+         j.className = "DropdownColour3 DropdownHoverColour3";
+     }
+
+    </script>
+
+</head>
+
+
+
+<body id="bodyId" class="backgroundPageColour">
+
+    <p id="MenuId" class="backgroundColour hoverButton fontSize1">
+        <a href="/createGame.html" style="width: 100%;">Main Menu</a>
+    </p>
+        
+    <h2>
+        Instructions
+    </h2>
+    <img src = "https://upload.wikimedia.org/wikipedia/en/b/b0/The_Tetris_Company_logo.png" style="float:right">
+    <p>
+        <b>GOAL</b>
+         - Put your organizational skills and endurance to the test by clearing as many lines as possible.
+    </p>
+    <p>
+        <b>CLEAR LINES</b>
+         – Maneuver the falling Tetriminos to fit them together within the Matrix. To clear a line, fill every square within a single row.
+    </p>
+    <p>
+        <b>SCORE POINTS</b>
+         - Earn points by clearing lines. Clear multiple lines at once to increase your scoring opportunities.
+    </p>
+    <p>
+        <b>GHOST PIECE</b>
+         – Use the Ghost Piece to determine the best fit for the falling Tetrimino. This helpful guide appears directly below the falling Tetrimino and displays possible placements.
+    </p>
+    <p>
+       <b>NEXT QUEUE</b>
+       – Preview the upcoming Tetrimino in the Next Queue to plan ahead and increase your scoring opportunities.
+    </p>
+    <p>
+        <b>HOLD QUEUE</b>
+         – Store a falling Tetrimino in the Hold Queue for later use.
+    </p>
+    <p>
+        <b>GAME OVER</b>
+         - Stack the Tetriminos too high and the game is over!
+    </p>
+
+    <div>
+    <ul>
+        <li>
+        <a id="DropdownId" class="dropdownLink" href="#">Colour Themes</a>
+        <ul>
+            <li><a href="#" onClick="theme1Colour1(); theme1Colour2(); theme1Colour3()">Colour Theme 1</a></li>
+            <li><a href="#" onClick="theme2Colour1(); theme2Colour2(); theme2Colour3()">Colour Theme 2</a></li>
+            <li><a href="#" onClick="theme3Colour1(); theme3Colour2(); theme3Colour3()">Colour Theme 3</a></li>
+        </ul>
+        </li>
+    </ul>
+    </div>
+
+</body>
+
+</html>
