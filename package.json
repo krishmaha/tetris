@@ -12,7 +12,9 @@
   "author": "Softwire Work Experience",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.11.16",
+    "mongoose-unique-validator": "^2.0.3"
   },
   "devDependencies": {
     "ava": "^3.13.0",

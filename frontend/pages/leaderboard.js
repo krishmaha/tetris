@@ -11,17 +11,17 @@ var player9_ul = document.getElementById("player9");
 var player10_ul = document.getElementById("player10");
 
 //Get top players & scores from data base. Hard coded below for now
-var p1 = 'Player 1: Score';
+var p1 = 'Player 1 👑: Score';
 console.log(typeof p1)
-var p2 = 'Player 2: Score';
-var p3 = 'Player 3: Score';
-var p4 = 'Player 4: Score';
-var p5 = 'Player 5: Score';
-var p6 = 'Player 6: Score';
-var p7 = 'Player 7: Score';
-var p8 = 'Player 8: Score';
-var p9 = 'Player 9: Score';
-var p10 = 'Player 10: Score';
+var p2 = 'Player 2 🥈: Score';
+var p3 = 'Player 3 🥉: Score';
+var p4 = 'Player 4 🏵️: Score';
+var p5 = 'Player 5 🏵️ : Score';
+var p6 = 'Player 6 🥄: Score';
+var p7 = 'Player 7 🥄: Score';
+var p8 = 'Player 8 🥄: Score';
+var p9 = 'Player 9 🥄: Score';
+var p10 = 'Player 10 🥄: Score';
 
 //Assign players & scores to html list
 player1_ul.innerHTML=p1;
