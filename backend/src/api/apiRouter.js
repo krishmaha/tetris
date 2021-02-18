@@ -1,7 +1,8 @@
 import { createUserEndpoint } from './endpoints/createUserEndpoint.js'
 import { exampleEndpoint } from './endpoints/exampleEndpoint.js'
-import {createTestEndpoint} from './endpoints/createTestEndpoint.js'
-import {getTestEndpoint} from './endpoints/getTestEndpoint.js'
+import { createTestEndpoint } from './endpoints/createTestEndpoint.js'
+import { getTestEndpoint } from './endpoints/getTestEndpoint.js'
+import { checkUserEndpoint } from './endpoints/checkUserEndpoint.js'
 
 import express from 'express'
 
@@ -10,5 +11,6 @@ apiRouter.use(express.json())
 
 apiRouter.get('/', exampleEndpoint)
 apiRouter.post('/users', createUserEndpoint)
+apiRouter.get('/users-check', checkUserEndpoint)
 apiRouter.post('/test', createTestEndpoint)
 apiRouter.get('/test', getTestEndpoint)

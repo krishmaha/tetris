@@ -2,7 +2,7 @@ import { User } from '../models/user.js'
 
 export const createUserEndpoint = async (req, res) => {
     //Display the request body in terminal so we can test and debig it's the correct value
-    console.log("Request body/content: " + req.body);
+    console.log("Request body/content: " + req.body.username + req.body.password);
 
     // We try to save a user to the database
     try {

@@ -308,30 +308,34 @@
     
 
 <div id="signin_box" class="container" style="display: none;">
-
-    <form method="GET">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+    <form id="signin_form" enctype="application/json" method="GET", action="/api/users-check">
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" required>
         <br>
         <br>
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
         <br><br>
         <button class="cancel" onclick="document.getElementById('signin_box').style.display='none'">Cancel</button>
-        <button class="login" type="submit" onclick="getDetails(this.form)">
+        <!-- <button class="login" type="submit" onclick="getDetails(this.form)">
             <a href="game.html">Log in</a>
-        </button>
+        </button> -->
+
+        <button id='post-btn' class="login" type="submit">Log in</button>
+
+
+
     </form>
 </div>
 
 <div id="signup_box" class="container" style="display: none;">
-    <form method="GET">
+    <form method="GET", action="/api/users">
         <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <input type="text" placeholder="Enter Username" name="username" required>
         <br>
         <br>
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="password" placeholder="Enter Password" name="password" required>
         <br><br>
         <button class="cancel" onclick="document.getElementById('signup_box').style.display='none'">Cancel</button>
         <button class="signup" type="submit" onclick="checkDetails(this.form)">Sign up</button>
