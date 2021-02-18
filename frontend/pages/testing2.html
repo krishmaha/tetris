@@ -18,51 +18,20 @@
     </style>
   </head>
   <body>
-    <iframe
-      src="testing2.html"
-      style="border: none"
-      height="500"
-      width="500"
-      title="Game"
-      style="
-        position: relative;
-        left: 0px;
-        top: 0px;
-        margin: 0px;
-        padding: 0px;
-        border: none;
-        outline: none;
-        -moz-outline-style: none;
-      "
-    >
-    </iframe>
-
     <canvas id="tetris" width="200" height="400"></canvas>
     <div>
       Score :
       <div id="score">0</div>
     </div>
-    <!DOCTYPE html>
+
     <html>
-      <head>
-        <title>How to disable scrolling temporarily using JavaScript?</title>
-        <style>
-          .scrollable-place {
-            height: 1000px;
-          }
-        </style>
-      </head>
-
       <body>
-        <h1 style="color: green">GeeksforGeeks</h1>
-
-        <b>How to disable scrolling temporarily using JavaScript?</b>
-        <p>Click on the buttons below to enable or disable scrolling.</p>
-
-        <p class="scrollable-place">
-          <button onclick="disableScroll()">Disable Scrolling</button>
-        </p>
-
+        <script src="scrollDisable.js"></script>
+        <script>
+          window.addEventListener("load", function () {
+            disableScroll();
+          });
+        </script>
         <script>
           function disableScroll() {
             // Get the current page scroll position

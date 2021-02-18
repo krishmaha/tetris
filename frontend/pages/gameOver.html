@@ -29,6 +29,96 @@ h2 {
   font-weight: bold;
 }
 
+
+.button1 {
+                background-color: #fa7900;
+                border: none;
+                border-radius: 30px;
+                color: rgb(0, 0, 0);
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 120%;
+                margin: 4px 2px;
+                cursor: pointer;
+                font-family: fantasy;
+                position: absolute;
+                top: 55%;
+                left:10%;
+                }
+
+.button1:hover {
+                background-color: #9924cf;
+                color: white;
+                transition-duration:  0.5s;
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                }
+.button1:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button2 {
+                background-color: #fa7900;
+                border: none;
+                border-radius: 30px;
+                color: rgb(0, 0, 0);
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 120%;
+                margin: 4px 2px;
+                cursor: pointer;
+                font-family: fantasy;
+                position: absolute;
+                top: 65%;
+                left:10.5%;
+                }
+
+.button2:hover {
+                background-color: #9924cf;
+                color: white;
+                transition-duration:  0.5s;
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                }
+
+.button2:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button3 {
+                background-color: #fa7900;
+                border: none;
+                border-radius: 30px;
+                color: rgb(0, 0, 0);
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 120%;
+                margin: 4px 2px;
+                cursor: pointer;
+                font-family: fantasy;
+                position: absolute;
+                top: 75%;
+                left:11%;
+                }
+
+.button3:hover {
+                background-color: #9924cf;
+                color: white;
+                transition-duration:  0.5s;
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                }
+
+.button3:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 /* Styles the header */
 header {
   background-color: #7577f1;
@@ -119,14 +209,19 @@ section::after {
 </h2>
 </header>
 
+<button id='playagain' class="button button1" style="vertical-align:middle" onclick="window.location.href='game.html';"> <span> Play Again 🎮 </span> 
+</button>
+
+<button id='homepage' class="button button2" style="vertical-align:middle" onclick="window.location.href='homePage.html';"> <span> Home Page </span> 
+</button>
+
+<button id='settings' class="button button3" style="vertical-align:middle" onclick="window.location.href='settings.html';"> <span> Settings </span> 
+</button>
+
 <section>
   <nav>
     <ul>
-      <a href="createGame.html">Home Page</a>
-      <br>
-      <a href="game.html">Play Again</a>
-      <br>
-      <a href="#">Settings</a>
+      
     </ul>
   </nav>
   

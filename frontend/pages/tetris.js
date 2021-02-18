@@ -1,3 +1,6 @@
+// SEE tetrisCorrected.js SOME OF THE FUNCTIONS AND CLASSES IN THIS FILE
+// WERE MISSING BRACKETS BUT WE HAVE CORRECTED THEM AND REWRITTEN THE CODE
+
 // access the canvas
 const canvasDisplay = document.getElementById("tetris");
 
@@ -11,7 +14,8 @@ const numberOfRows = 30;
 const numberOfColumns = 30;
 // define the colour of an empty square (can be altered later)
 const isVacant = "WHITE";
-
+console.log("the variables have been defined");
+debugger;
 // this uses the canavas styling properties to determine where the square will be drawn and what color it should be
 function fillSquare(x, y, colour) {
   ctx.fillStyle = colour;
@@ -36,7 +40,7 @@ for (r = 0; r < numberOfRows; r++) {
   }
 }
 
-function createGrid() {
+function creategrid() {
   // create the numberOfRowss
   for (r = 0; r < numberOfRows; r++) {
     //create the numberOfColumnss
@@ -48,8 +52,9 @@ function createGrid() {
 }
 
 // invoke the function
-createGrid();
-
+creategrid();
+console.log("the grid has been created");
+debugger;
 // creating the pieces and defining their colours
 const pieces = [
   [I, "purple"],
@@ -61,6 +66,8 @@ const pieces = [
   [Z, "cyan"],
 ];
 
+console.log("the pieces in tetris.js with colours are defined");
+debugger;
 // generate a random piece
 function randomPiece() {
   let ran = (randomNumber = Math.floor(Math.random() * pieces.length));
@@ -69,7 +76,7 @@ function randomPiece() {
 
 // instantiate an instance of the Piece object
 let p = randomPiece();
-
+console.log("a random piece has been  generated and instantiated");
 // this function defines the object that wil hold the pieces
 function Piece(tetromino, colour) {
   this.tetromino = tetromino;
@@ -86,7 +93,7 @@ function Piece(tetromino, colour) {
 
   // we will use the following variable to control the pieces
   this.x = 3;
-  this.y = -2;
+  this.y = 2;
 }
 
 // filling a piece
@@ -106,11 +113,15 @@ Piece.prototype.fill = function (colour) {
   }
 };
 
+console.log("the piece has been filled with colour");
+debugger;
+
 // drawing a piece
 Piece.prototype.draw = function () {
   this.fill(this.colour);
 };
-
+console.log("the piece has been drawn");
+debugger;
 // undrawing (removing) a piece
 Piece.prototype.unDraw = function () {
   this.fill(isVacant);
@@ -194,7 +205,7 @@ Piece.prototype.lock = function () {
     }
   }
   // update the grid
-  createGrid();
+  creategrid();
 
   // update score
   // TO DO
@@ -283,4 +294,3 @@ function drop() {
 }
 
 drop();
-createGrid();

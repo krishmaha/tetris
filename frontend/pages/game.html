@@ -12,12 +12,16 @@
 - div to display the score count of the user (not started)
 
 -->
-
+<head>
 <title>Tetris</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+
+html {
+  position: fixed
+}
 
 * {
   box-sizing: border-box;
@@ -27,10 +31,27 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.glow {
+    font-size: 20px;                  
+    text-align: left;
+    animation: glow 1s ease-in-out infinite alternate;
+      }
+
+#score {
+        font-family: cursive;
+        color: rgb(173, 162, 0);
+        font-size: 30px
+    }
+#scoreTitle {
+  font-family: cursive;
+  color:lime;
+  font-size: 30px
+}
+
 /* Styles the header*/
 header {
   background-color: #7577f1;
-  padding: 30px;
+  padding: 15px;
   text-align: center;
   font-size: 35px;
   color:black;
@@ -92,6 +113,11 @@ section::after {
   color: red;
 }
 
+.countdown {
+  align-items: left;
+  padding: 10px;
+  
+}
 
 /* Responsive layout*/
 @media (max-width: 600px) {
@@ -100,6 +126,173 @@ section::after {
     height: auto;
   }
 }
+
+.button1 {
+                background-color: #fa7900;
+                border: none;
+                border-radius: 30px;
+                color: rgb(0, 0, 0);
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 120%;
+                margin: 4px 2px;
+                cursor: pointer;
+                font-family: fantasy;
+                position: absolute;
+                top: 55%;
+                left:10%;
+}
+.button1:hover {
+                background-color: #9924cf;
+                color: white;
+                transition-duration:  0.5s;
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                }
+.button1:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button2 {
+                background-color: #fa7900;
+                border: none;
+                border-radius: 30px;
+                color: rgb(0, 0, 0);
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 120%;
+                margin: 4px 2px;
+                cursor: pointer;
+                font-family: fantasy;
+                position: absolute;
+                top: 65%;
+                left:10.5%;
+                }
+
+.button2:hover {
+                background-color: #9924cf;
+                color: white;
+                transition-duration:  0.5s;
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                }
+
+.button2:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button3 {
+                background-color: #fa7900;
+                border: none;
+                border-radius: 30px;
+                color: rgb(0, 0, 0);
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 120%;
+                margin: 4px 2px;
+                cursor: pointer;
+                font-family: fantasy;
+                position: absolute;
+                top: 75%;
+                left:11%;
+                }
+
+.button3:hover {
+                background-color: #9924cf;
+                color: white;
+                transition-duration:  0.5s;
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                }
+
+.button3:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.countdown {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+}
+
+.leaderboard {
+            color: rgb(92, 205, 250);
+            font-size: large;
+            position: absolute;
+            top:35%;
+            right:5%;
+            background-image: url(leaderboard-bg.jpg);
+            width: 25%;
+            height:50%; 
+            border-radius: 5%;
+            border-color: chartreuse;
+            padding: 1%
+        }
+
+
+#player1 {
+                    font-family: cursive;
+                    color: rgb(173, 162, 0);
+                }
+                #player2 {
+                    font-family: cursive;
+                    color: rgb(172, 172, 172);  
+                }
+                #player3 {
+                    font-family: cursive;
+                    color: rgb(202, 118, 7);
+                }
+                #player4 {
+                    font-family: cursive;
+                    color: rgb(255, 255, 255);
+                }            
+                #player5 {
+                    font-family: cursive;
+                    color: rgb(255, 255, 255);
+                }            
+                #player6 {
+                    font-family: cursive;
+                    color: rgb(0, 0, 0);
+                }            
+                #player7 {
+                    font-family: cursive;
+                    color: rgb(0, 0, 0);
+                }            
+                #player8 {
+                    font-family: cursive;
+                    color: rgb(0, 0, 0);
+                }            
+                #player9 {
+                    font-family: cursive;
+                    color: rgb(0, 0, 0);
+                }            
+                #player10 {
+                    font-family: cursive;
+                    color: rgb(0, 0, 0);
+                }            
+                .glow {
+                  font-size: 20px;                  
+                  text-align: left;
+                  animation: glow 1s ease-in-out infinite alternate;
+                }
+
+                @-webkit-keyframes glow {   
+                  from {
+                    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e4e714, 0 0 40px #d5d80d, 0 0 50px #ebd40d, 0 0 60px #e60073, 0 0 70px #e60073;
+                  }
+                  
+                  to {
+                    text-shadow: 0 0 20px #fff, 0 0 30px rgb(224, 192, 8), 0 0 40px #e2df09, 0 0 50px #e2cc08, 0 0 60px #f0d910, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+                  }
+                }
+
+
 </style>
 <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
@@ -110,6 +303,7 @@ section::after {
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-config" content="/favicons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
+
 </head>
 <body>
 
@@ -120,15 +314,8 @@ section::after {
 
 <section>
   <nav>
-      <ul>    
-      <a href="createGame.html">Home Page</a>
-      <br>
-      <a href="game.html">Play Again</a>
-      <br>
-      <a href="#">Settings</a>
-      </ul>
-    
-  </nav>
+ 
+    </nav>
   
   <article>
     <h1> 
@@ -147,8 +334,13 @@ section::after {
 </head>
 
 
-<body>
     <script src = "countdown.js"></script>
+    <script src = 'scrollDisable.js'></script>
+    <script>
+      window.addEventListener("load", function(){
+         disableScroll()
+      })
+  </script> 
     <script>
         window.addEventListener("load", function(){
             counter.init("A", 301, function(idx){
@@ -159,14 +351,49 @@ section::after {
     <div id="target" class = "countdown">
         <div id = "A"></div>
     </div>
-    <div id='score'>{score}</div>
-    <h1/>
-        
-<canvas id = "tetris" width = '300' height = '600'></canvas>
-<script src='tetrominoes.js'></script>
-<script src = 'tetris.js'></script>
+    <h3 class="glow" id="scoreTitle">Score:</h3>
+    <div id='score' class = 'glow'></div>
+    </h1>   
+<canvas id = "tetris" width = '500' height = '1000'></canvas>
+<script src="tetrominoes.js"></script>
+<script src="tetrisCorrected.js"></script>
+
+<button id='playagain' class="button button1" style="vertical-align:middle" onclick="window.location.href='game.html';"> <span> Play Again 🎮 </span> 
+</button>
+<div id="target" class = "countdown">
+  <div id = "A"></div>
+</div>
+
+<button id='homepage' class="button button2" style="vertical-align:middle" onclick="window.location.href='homePage.html';"> <span> Home Page </span> 
+</button>
+
+<button id='settings' class="button button3" style="vertical-align:middle" onclick="window.location.href='settings.html';"> <span> Settings </span> 
+</button>
+
+
+
+<div class="leaderboard" style="font-family: cursive; font-weight: 700"> 
+  <h1>Leaderboard</h1>
+  
+  <ul style="list-style-type:square">
+      <li id="player1" class="glow"></li>
+      <li id="player2"></li>
+      <li id="player3"></li>
+      <li id="player4"></li>
+      <li id="player5"></li>
+      <li id="player6"></li>
+      <li id="player7"></li>
+      <li id="player8"></li>
+      <li id="player9"></li>
+      <li id="player10"></li>
+  </ul>
+<script src="leaderboard.js"></script>
+  
+</div>
+
     </body>
     
   </article>
 </section>
+</html>
 
