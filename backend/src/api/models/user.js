@@ -11,15 +11,5 @@ const userSchema = new Schema({
 
 userSchema.plugin(uniqueValidator);
 
-var u = mongoose.model('users', userSchema);
-
-// import everything with the name user from this file
-
-export const createUserEndpoint = async () => {
-    const user = new u({
-        username: "username3",
-        password: "something"
-    });
-    await user.save();
-    return user;
-}
+// User is our model
+export const User = mongoose.model('users', userSchema);

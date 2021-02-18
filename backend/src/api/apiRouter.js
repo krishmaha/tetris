@@ -1,9 +1,14 @@
-import { ApiRouterBuilder } from './apiRouterBuilder.js'
-import { createUserEndpoint } from './endpoints/addUser.js'
+import { createUserEndpoint } from './endpoints/createUserEndpoint.js'
 import { exampleEndpoint } from './endpoints/exampleEndpoint.js'
+import {createTestEndpoint} from './endpoints/createTestEndpoint.js'
+import {getTestEndpoint} from './endpoints/getTestEndpoint.js'
 
-const routerBuilder = new ApiRouterBuilder()
-routerBuilder.addGetEndpoint('/', exampleEndpoint)
-routerBuilder.addGetEndpoint('/users', createUserEndpoint)
+import express from 'express'
 
-export const apiRouter = routerBuilder.router
+export const apiRouter = express.Router()
+apiRouter.use(express.json())
+
+apiRouter.get('/', exampleEndpoint)
+apiRouter.post('/users', createUserEndpoint)
+apiRouter.post('/test', createTestEndpoint)
+apiRouter.get('/test', getTestEndpoint)
