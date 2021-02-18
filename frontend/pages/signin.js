@@ -4,10 +4,10 @@ function showDiv() {
  }
 
 
-function getDetails(form) {
-    var uname = form.uname.value;
-    var psw = form.psw.value;
-    alert(uname + ': ' + psw);
+function getDetails(form) {   
+   var uname = form.username.value;
+   var psw = form.password.value;
+   //  alert(uname + ': ' + psw);
         
     //CHECK uname & psw IN DATABASE. 
     
@@ -17,9 +17,30 @@ function getDetails(form) {
  }
 
  function checkDetails(form) {
-    var uname = form.uname.value;
-    var psw = form.psw.value;
+    var uname = form.username.value;
+    var psw = form.password.value;
     alert(uname + ': ' + psw);
         
     //Send to database  
  }
+
+
+
+
+const button = document.getElementById('post-btn');
+button.addEventListener('click', async _ => {
+try {     
+   const signin_form = document.getElementById('signin_form')
+   const response = await fetch('http://localhost:3000/api/users-check', {
+      method: 'post',
+      body: {
+      "username": signin_form.username.value,
+      "password": signin_form.password.value
+      }
+   });
+   // console.log(signin_form.username.value);
+   console.log('Completed!', response);
+} catch(err) {
+   console.error(`Error: ${err}`);
+}
+});
