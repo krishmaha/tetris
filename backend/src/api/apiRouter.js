@@ -1,10 +1,8 @@
 import { createUserEndpoint } from './endpoints/createUserEndpoint.js'
 import { exampleEndpoint } from './endpoints/exampleEndpoint.js'
-import { createTestEndpoint } from './endpoints/createTestEndpoint.js'
 import { getTestEndpoint } from './endpoints/getTestEndpoint.js'
 import { checkUserEndpoint } from './endpoints/checkUserEndpoint.js'
 import {createTestEndpoint} from './endpoints/createTestEndpoint.js'
-import {getTestEndpoint} from './endpoints/getTestEndpoint.js'
 import {createScoresEndpoint} from './endpoints/createScoresEndpoint.js'
 import {getScoresEndpoint} from './endpoints/getScoresEndpoint.js'
 
