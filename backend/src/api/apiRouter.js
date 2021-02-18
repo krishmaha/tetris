@@ -3,10 +3,10 @@ import { exampleEndpoint } from './endpoints/exampleEndpoint.js'
 import { createTestEndpoint } from './endpoints/createTestEndpoint.js'
 import { getTestEndpoint } from './endpoints/getTestEndpoint.js'
 import { checkUserEndpoint } from './endpoints/checkUserEndpoint.js'
-import {createTestEndpoint} from './endpoints/createTestEndpoint.js'
-import {getTestEndpoint} from './endpoints/getTestEndpoint.js'
 import {createScoresEndpoint} from './endpoints/createScoresEndpoint.js'
 import {getScoresEndpoint} from './endpoints/getScoresEndpoint.js'
+import { signinReceiveEndpoint } from './endpoints/signinReceiveEndpoint.js'
+
 
 import express from 'express'
 
@@ -15,7 +15,10 @@ apiRouter.use(express.json())
 
 apiRouter.get('/', exampleEndpoint)
 apiRouter.post('/users', createUserEndpoint)
-apiRouter.get('/users-check', checkUserEndpoint)
+// TO DO new endpoint
+apiRouter.post('/users-receive-data', signinReceiveEndpoint)
+
+apiRouter.post('/users-check', checkUserEndpoint)
 apiRouter.post('/test', createTestEndpoint)
 apiRouter.post('/score', createScoresEndpoint)
 apiRouter.get('/test', getTestEndpoint)
