@@ -308,13 +308,13 @@
     
 
 <div id="signin_box" class="container" style="display: none;">
-    <form id="signin_form" enctype="application/json">
+    <div>
         <label for="username"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="username" required>
+        <input id="usernameElement" type="text" placeholder="Enter Username" name="username" required>
         <br>
         <br>
         <label for="password"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
+        <input id="passwordElement" type="password" placeholder="Enter Password" name="password" required>
         <br><br>
         <button class="cancel" onclick="document.getElementById('signin_box').style.display='none'">Cancel</button>
         <!-- <button class="login" type="submit" onclick="getDetails(this.form)">
@@ -325,11 +325,11 @@
 
 
 
-    </form>
+    </div>
 </div>
 
 <div id="signup_box" class="container" style="display: none;">
-    <form method="GET", action="/api/users">
+    <form>
         <label for="uname"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="username" required>
         <br>

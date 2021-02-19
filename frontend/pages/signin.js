@@ -28,21 +28,24 @@ function getDetails(form) {
 
 
 const button = document.getElementById('post-btn');
+
 button.addEventListener('click', async () => {
-try {     
-   const signin_form = document.getElementById('signin_form')
-   console.log(signin_form.username.value)
+try {
+   const username = document.getElementById('usernameElement').value;
+   const password = document.getElementById('passwordElement').value;
+
    const response = await fetch('http://localhost:3000/api/users-check', {
       method: 'POST',
-      body: {
-      "username": signin_form.username.value,
-      "password": signin_form.password.value,
-      'Content-Type': 'application/json',
+      body: JSON.stringify({
+      "username": username,
+      "password": password,
+      }),
+      headers: {
+         'Content-Type': 'application/json'
       }
    });
-   const data = await fetchResponse.json()
-   return data
-   // console.log(signin_form.username.value);
+   const data = await fetchResponse.json();
+   console.log(data);
    console.log('Completed!', response);
 } catch(err) {
    console.error(`Error: ${err}`);
