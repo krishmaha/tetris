@@ -1,5 +1,5 @@
 console.log("the pieces have been loaded");
-debugger;
+// debugger;
 
 const I = [
   // below the various orentiations of the I shape are displayed inside array matrixes
