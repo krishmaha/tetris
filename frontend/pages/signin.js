@@ -1,5 +1,5 @@
 function showDiv() {
-    var signin_box = document.getElementById('signin_box')
+    var signin_box = document.getElementById('signin_box');
     signin_box.style.display = "block";
  }
 
@@ -28,19 +28,76 @@ function getDetails(form) {
 
 
 const button = document.getElementById('post-btn');
-button.addEventListener('click', async _ => {
-try {     
-   const signin_form = document.getElementById('signin_form')
+
+button.addEventListener('click', async () => {
+try {
+   const username = document.getElementById('usernameElement').value;
+   const password = document.getElementById('passwordElement').value;
+
    const response = await fetch('http://localhost:3000/api/users-check', {
-      method: 'post',
-      body: {
-      "username": signin_form.username.value,
-      "password": signin_form.password.value
+      method: 'POST',
+      body: JSON.stringify({
+      "username": username,
+      "password": password,
+      }),
+      headers: {
+         'Content-Type': 'application/json'
       }
    });
-   // console.log(signin_form.username.value);
-   console.log('Completed!', response);
+   const data = await response.json();
+   if (data.message == "Accepted" ){
+      window.location.replace("http://localhost:3000/game.html")
+   }
+   else{
+      document.getElementById("failedSignin").style.display ="block"
+
+   }
+   // const data = await fetchResponse.json();
+   // console.log(data);
+   // res = JSON.parse(response);
+   console.log('Completed!', data.message);
+
+
+
+
+
+
 } catch(err) {
    console.error(`Error: ${err}`);
 }
 });
+
+
+// fetch(request).then((response) => {
+//     console.log(response);
+//     response.js.then((data) => {
+//         console.log(data)
+//     })
+// })
+// var str = '{"hello":"world"}';
+// try {
+//   var obj = JSON.parse(str); // this is how you parse a string into JSON 
+//   document.body.innerHTML += obj.hello;
+// } catch (ex) {
+//   console.error(ex);
+// }
+
+
+// getDevices = async () => {
+//    const location = window.location.hostname;
+//    const settings = {
+//        method: 'POST',
+//        headers: {
+//            Accept: 'application/json',
+//            'Content-Type': 'application/json',
+//        }
+//    };
+//    try {
+//        const fetchResponse = await fetch(`http://${location}:9000/api/sensors/`, settings);
+//        const data = await fetchResponse.json();
+//        return data;
+//    } catch (e) {
+//        return e;
+//    }    
+
+// }

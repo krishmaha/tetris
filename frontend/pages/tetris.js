@@ -15,7 +15,7 @@ const numberOfColumns = 30;
 // define the colour of an empty square (can be altered later)
 const isVacant = "WHITE";
 console.log("the variables have been defined");
-debugger;
+// debugger;
 // this uses the canavas styling properties to determine where the square will be drawn and what color it should be
 function fillSquare(x, y, colour) {
   ctx.fillStyle = colour;
@@ -54,7 +54,7 @@ function creategrid() {
 // invoke the function
 creategrid();
 console.log("the grid has been created");
-debugger;
+// debugger;
 // creating the pieces and defining their colours
 const pieces = [
   [I, "purple"],
@@ -67,7 +67,7 @@ const pieces = [
 ];
 
 console.log("the pieces in tetris.js with colours are defined");
-debugger;
+// debugger;
 // generate a random piece
 function randomPiece() {
   let ran = (randomNumber = Math.floor(Math.random() * pieces.length));
@@ -114,14 +114,14 @@ Piece.prototype.fill = function (colour) {
 };
 
 console.log("the piece has been filled with colour");
-debugger;
+// debugger;
 
 // drawing a piece
 Piece.prototype.draw = function () {
   this.fill(this.colour);
 };
 console.log("the piece has been drawn");
-debugger;
+// debugger;
 // undrawing (removing) a piece
 Piece.prototype.unDraw = function () {
   this.fill(isVacant);
