@@ -64,7 +64,7 @@
         }
 
         #settings:hover{
-            background-color:rgb(221, 21, 21);
+            background-color:rgb(255, 255, 0);
             border-color: cadetblue;
             color: white;
             width: 120px;
@@ -237,9 +237,22 @@
                     text-shadow: 0 0 20px #fff, 0 0 30px rgb(224, 192, 8), 0 0 40px #e2df09, 0 0 50px #e2cc08, 0 0 60px #f0d910, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
                   }
                 }
+                .colourButton {
+                background-color: rgb(246,139,31)
+                }       
 
 
     </style>
+
+    <script>
+        function theme1Colour1() {
+            var b = document.getElementById("settings");
+            b.className = "backgroundColour1";
+        }
+
+        var colourTheme = sessionStorage.getItem("colourTheme");
+    </script>
+
 </head>
 
 <br>
@@ -252,7 +265,7 @@
     <div>
 
     <!--CHANGE LINK TO SETTINGS PAGE-->
-    <button id='settings' class="button button2" style="vertical-align:middle" onclick="window.location.href='settings.html';"> <span> &#9881 </span> 
+    <button id='settings' class="colourButton button button2" style="vertical-align:middle" onclick="window.location.href='settings.html';"> <span> &#9881 </span> 
     </button>
     
     <button id='play' class="button button1" style="vertical-align:middle" onclick="window.location.href='guest_signin.html';"> <span> Play 🎮 </span> 

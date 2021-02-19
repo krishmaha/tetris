@@ -225,6 +225,18 @@
          j.className = "DropdownColour3 DropdownHoverColour3";
      }
 
+     function colourTheme1() {
+         var colourTheme = "Purple"
+         sessionStorage.setItem("colourTheme", colourTheme);
+     }
+     function colourTheme2() {
+         var colourTheme = "Yellow"
+         sessionStorage.setItem("colourTheme", colourTheme);
+     }
+     function colourTheme3() {
+         var colourTheme = "Blue"
+         sessionStorage.setItem("colourTheme", colourTheme);
+     }
     </script>
 
 </head>
@@ -275,9 +287,9 @@
         <li>
         <a id="DropdownId" class="dropdownLink" href="#">Colour Themes</a>
         <ul>
-            <li><a href="#" onClick="theme1Colour1(); theme1Colour2(); theme1Colour3()">Colour Theme 1</a></li>
-            <li><a href="#" onClick="theme2Colour1(); theme2Colour2(); theme2Colour3()">Colour Theme 2</a></li>
-            <li><a href="#" onClick="theme3Colour1(); theme3Colour2(); theme3Colour3()">Colour Theme 3</a></li>
+            <li><a href="#" onClick="theme1Colour1(); theme1Colour2(); theme1Colour3(); colourTheme1()">Colour Theme 1</a></li>
+            <li><a href="#" onClick="theme2Colour1(); theme2Colour2(); theme2Colour3(); colourTheme2()">Colour Theme 2</a></li>
+            <li><a href="#" onClick="theme3Colour1(); theme3Colour2(); theme3Colour3(); colourTheme3()">Colour Theme 3</a></li>
         </ul>
         </li>
     </ul>
