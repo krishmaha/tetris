@@ -1,5 +1,5 @@
 // access the canvas
-const canvasDisplay = document.getElementById("tetris");
+const canvasDisplay = document.getElementById("tetris1");
 
 // access the canvas styling properties
 const ctx = canvasDisplay.getContext("2d");
@@ -275,6 +275,12 @@ Piece.prototype.collision = function (x, y, piece) {
   // we return false and break the for loop
   return false;
 };
+
+
+
+
+
+
 
 //controlling the pieces
 // keycode for arnumberOfRows keys are:
