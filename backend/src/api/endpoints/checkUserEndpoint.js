@@ -9,12 +9,14 @@ export const checkUserEndpoint = async (req, res) => {
     const check = userpwd[0].password == req.body.password 
     
     if (check==true){
-        res.json({ message: "Accepted"});
-        console.log('Accepted') 
+       res.json({ message: "Accepted"});
+        console.log('Accepted');
+        // return re
     } else {
-        res.json({ message: "Rejected"});
+        res.json({message: "Rejected"});
         console.log('Rejected') 
+        return rejected
     }
     
-    return userpwd;
+    return res;
 }

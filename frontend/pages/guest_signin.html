@@ -193,7 +193,8 @@
         }
 
         .back {
-            position:absolute;
+            display: block;
+            position:fixed;
             top:2% ;
             left:2% ;
             background-color: #4CAF50;
@@ -287,6 +288,34 @@
             opacity: 0.9;
         }
 
+        .alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  margin-bottom: 15px;
+  font-family: 'Alfa Slab 1', cursive;
+  font-size: xx-large;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: black;
+  font-weight: bold;
+  float: right;
+  font-size: 25px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.closebtn:hover{
+  color: whitesmoke;
+}
+
+
     </style>
 
 
@@ -295,6 +324,11 @@
 
 <body>
 
+    <button style="display: block;" class="button back" onclick="location.href='homePage.html'">Back</button>
+
+
+    <img class="bg" src="logo4.png">
+    
     <div>
         <button id='Continue as guest' class="button button1" onclick="location.href='game.html'">Continue as guest</button>
         
@@ -309,6 +343,15 @@
 
 <div id="signin_box" class="container" style="display: none;">
     <div>
+        <h1>Username </h1>
+        <h2 id="failedSignin" style="display: none;"> 
+            <div class = 'alert'>
+                <span class="closebtn" onClick="this.parentElement.style.display='none';">
+                    &times;
+            </span>  
+            Sign in failed!
+          </div>
+        </h2>
         <label for="username"><b>Username</b></label>
         <input id="usernameElement" type="text" placeholder="Enter Username" name="username" required>
         <br>
@@ -329,17 +372,26 @@
 </div>
 
 <div id="signup_box" class="container" style="display: none;">
-    <form>
+    <div>
         <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="username" required>
+        <input id = "usernameElement1" type="text" placeholder="Enter Username" name="username" required>
         <br>
         <br>
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
+        <input id = "passwordElement1" type="password" placeholder="Enter Password" name="password" required>
         <br><br>
         <button class="cancel" onclick="document.getElementById('signup_box').style.display='none'">Cancel</button>
-        <button class="signup" type="submit" onclick="checkDetails(this.form)">Sign up</button>
-    </form>
+        <button id="signup-btn" class="signup" type="submit">Sign up</button>
+    <div>
+
+        <h2 id="existingUsername" style="display: none;"> 
+            <div class = 'alert'>
+                <span class="closebtn" onClick="this.parentElement.style.display='none';">
+                    &times;
+            </span>  
+            Username already exists, try again!
+          </div>
+        </h2>
 </div>
 
 
@@ -360,9 +412,9 @@ window.onclick = function(event) {
 }
 </script>
 
-    <div id="signin_box" class="container_signin" style="display: none;">
+    <!-- <div id="signin_box" class="container_signin" style="display: none;">
 
-        <form method="GET">
+        <div method="GET">
             <label for="uname"><b>Username</b></label>
             <input type="text" placeholder="Enter Username" name="uname" required>
             <br>
@@ -375,18 +427,20 @@ window.onclick = function(event) {
             
             <a href="game.html">Log in</a>
             </button>
-        </form>
+        </div>
 
-    </div>
+    </div> -->
 
-    <button class="button back" onclick="location.href='homePage.html'">Back</button>
+    
 
-    <img class="bg" src="logo4.png">
 
 
 
 
 <script src="signin.js"></script>
+<script src="signUp.js"></script>
+<!-- <script src="..../pages/g -->
+
 </body>
 
 </html>

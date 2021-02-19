@@ -15,9 +15,7 @@ apiRouter.use(express.json())
 
 apiRouter.get('/', exampleEndpoint)
 apiRouter.post('/users', createUserEndpoint)
-// TO DO new endpoint
 apiRouter.post('/users-receive-data', signinReceiveEndpoint)
-
 apiRouter.post('/users-check', checkUserEndpoint)
 apiRouter.post('/test', createTestEndpoint)
 apiRouter.post('/score', createScoresEndpoint)

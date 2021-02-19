@@ -44,13 +44,43 @@ try {
          'Content-Type': 'application/json'
       }
    });
-   const data = await fetchResponse.json();
-   console.log(data);
-   console.log('Completed!', response);
+   const data = await response.json();
+   if (data.message == "Accepted" ){
+      window.location.replace("http://localhost:3000/game.html")
+   }
+   else{
+      document.getElementById("failedSignin").style.display ="block"
+
+   }
+   // const data = await fetchResponse.json();
+   // console.log(data);
+   // res = JSON.parse(response);
+   console.log('Completed!', data.message);
+
+
+
+
+
+
 } catch(err) {
    console.error(`Error: ${err}`);
 }
 });
+
+
+// fetch(request).then((response) => {
+//     console.log(response);
+//     response.js.then((data) => {
+//         console.log(data)
+//     })
+// })
+// var str = '{"hello":"world"}';
+// try {
+//   var obj = JSON.parse(str); // this is how you parse a string into JSON 
+//   document.body.innerHTML += obj.hello;
+// } catch (ex) {
+//   console.error(ex);
+// }
 
 
 // getDevices = async () => {

@@ -1,5 +1,6 @@
 import { User } from '../models/user.js'
 
+
 export const createUserEndpoint = async (req, res) => {
     //Display the request body in terminal so we can test and debig it's the correct value
     console.log("Request body/content: " + req.body.username + req.body.password);
@@ -24,3 +25,5 @@ export const createUserEndpoint = async (req, res) => {
         res.json(err);
     }
 }
+
+// How to fix ' ValidationError: users validation failed: name: Path , In your code I can see that you are setting newUser as User() model object, then setting that to a plain javascript object. Which is wrong syntactically as well. ValidationError: User validation failed: username: Path username is required. I am a Beginner at Node JS and Mongo DB. Hence I am not able to understand what is going wrong.
